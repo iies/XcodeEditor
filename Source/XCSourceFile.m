@@ -123,14 +123,11 @@
     if (_type == SourceCodeObjC || _type == SourceCodeObjCPlusPlus || _type == SourceCodeCPlusPlus || _type == XibFile || _type == SourceCodeSwift) {
         return PBXSourcesBuildPhaseType;
     }
-    else if (_type == Framework) {
+    else if (_type == Framework || _type == Archive || _type == DyLib) {
         return PBXFrameworksBuildPhaseType;
     }
     else if (_type == ImageResourcePNG || _type == HTML || _type == Bundle || _type == AssetCatalog) {
         return PBXResourcesBuildPhaseType;
-    }
-    else if (_type == Archive) {
-        return PBXFrameworksBuildPhaseType;
     }
     return PBXNilType;
 }

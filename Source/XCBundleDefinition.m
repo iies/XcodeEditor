@@ -16,10 +16,10 @@
 /* ====================================================================================================================================== */
 #pragma mark - Class Methods
 
-+ (XCBundleDifinition*)bundleDefinitionWithFilePath:(NSString*)filePath copyToDestination:(BOOL)copyToDestination
++ (XCBundleDefinition*)bundleDefinitionWithFilePath:(NSString*)filePath copyToDestination:(BOOL)copyToDestination
 {
     
-    return [[XCBundleDifinition alloc] initWithFilePath:filePath copyToDestination:copyToDestination];
+    return [[XCBundleDefinition alloc] initWithFilePath:filePath copyToDestination:copyToDestination];
 }
 
 /* ====================================================================================================================================== */

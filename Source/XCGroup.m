@@ -12,7 +12,7 @@
 
 
 #import "XCFrameworkDefinition.h"
-#import "XCBundleDifinition.h"
+#import "XCBundleDefinition.h"
 #import "XCTarget.h"
 #import "XCFileOperationQueue.h"
 #import "XCXibDefinition.h"

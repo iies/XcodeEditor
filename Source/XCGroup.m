@@ -191,7 +191,7 @@
     [self addSourceFile:frameworkSourceRef toTargets:targets];
 }
 
-- (void)addBundle:(XCBundleDifinition *)bundleDifinition
+- (void)addBundle:(XCBundleDefinition *)bundleDifinition
 {
     if (([self memberWithDisplayName:[bundleDifinition name]]) == nil)
     {
@@ -213,7 +213,7 @@
                 }
                 
             }
-            if (copyFramework)
+            if (copyBundle)
             {
                 [_fileOperationQueue queueFrameworkWithFilePath:[bundleDifinition filePath]
                                                     inDirectory:[self pathRelativeToProjectRoot]];
@@ -232,10 +232,10 @@
     [_project objects][_key] = [self asDictionary];
 }
 
-- (void)addBundle:(XCBundleDifinition*)bundleDifinition toTargets:(NSArray*)targets
+- (void)addBundle:(XCBundleDefinition*)bundleDefinition toTargets:(NSArray*)targets
 {
-    [self addBundle:bundleDifinition];
-    XCSourceFile* bundleSourceRef = (XCSourceFile*) [self memberWithDisplayName:[bundleDifinition name]];
+    [self addBundle:bundleDefinition];
+    XCSourceFile* bundleSourceRef = (XCSourceFile*) [self memberWithDisplayName:[bundleDefinition name]];
     [self addSourceFile:bundleSourceRef toTargets:targets];
 }
 

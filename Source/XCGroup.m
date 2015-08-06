@@ -24,6 +24,7 @@
 #import "XCSourceFileDefinition.h"
 #import "XCSubProjectDefinition.h"
 #import "XCProject+SubProject.h"
+#import "XCDyLibDefinition.h"
 
 
 @implementation XCGroup
@@ -237,6 +238,18 @@
     [self addBundle:bundleDefinition];
     XCSourceFile* bundleSourceRef = (XCSourceFile*) [self memberWithDisplayName:[bundleDefinition name]];
     [self addSourceFile:bundleSourceRef toTargets:targets];
+}
+
+- (void)addDyLib:(XCDyLibDefinition*)dylibDefinition
+{
+    NSString *name = [dylibDefinition name];
+    NSString *path = [dylibDefinition path] ?: [NSString stringWithFormat:@"usr/lib/%@", name];
+    NSDictionary *dylibReferenceDictionary = [self makeFileReferenceWithPath:path name:name type:DyLib];
+    
+    NSString *dylibReferenceKey = [[XCKeyBuilder forItemNamed:name] build];
+    [self addMemberWithKey:dylibReferenceKey];
+    [_project objects][dylibReferenceKey] = dylibReferenceDictionary;
+    [_project objects][_key] = [self asDictionary];
 }
 
 - (void)addFolderReference:(NSString*)sourceFolder {

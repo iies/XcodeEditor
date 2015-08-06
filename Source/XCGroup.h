@@ -22,7 +22,7 @@
 @class XCBundleDefinition;
 @class XCSourceFileDefinition;
 @class XCSubProjectDefinition;
-
+@class XCDyLibDefinition;
 
 /**
 * Represents a group container in an Xcode project. A group can contain members of type `XCSourceFile` or other
@@ -131,6 +131,11 @@
  * Adds a bundle to the group, making it a member of the specified targets.
  */
 - (void)addBundle:(XCBundleDefinition*)bundleDifinition toTargets:(NSArray*)targets;
+
+/**
+ * Adds a dylib to the group
+ */
+- (void)addDyLib:(XCDyLibDefinition*)dylibDefinition;
 
 /**
 * Adds a source file of arbitrary type - image resource, header, etc.

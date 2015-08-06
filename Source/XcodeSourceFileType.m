@@ -35,7 +35,8 @@ static NSDictionary* NSDictionaryWithXCFileReferenceTypes()
             @"wrapper.pb-project"    : @(XcodeProject),
             @"folder"                : @(Folder),
             @"folder.assetcatalog"   : @(AssetCatalog),
-            @"sourcecode.swift"     : @(SourceCodeSwift)
+            @"sourcecode.swift"      : @(SourceCodeSwift),
+            @"compiled.mach-o.dylib" : @(DyLib),
         };
     });
 

@@ -26,6 +26,8 @@
 		6BCED7001A4A629D0005596F /* XCProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798CFD524E5A3CF155C816 /* XCProjectTests.m */; };
 		6BCED7011A4A62A00005596F /* XCClassDefinitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7984685319A7BB1B37DBE9 /* XCClassDefinitionTests.m */; };
 		6BCED7031A4A62B00005596F /* XCKeyBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798BD3F30B4E39066F8108 /* XCKeyBuilderTests.m */; };
+		954E84DC1B732E5300210FC2 /* XCDyLibDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E84DA1B732E5300210FC2 /* XCDyLibDefinition.h */; };
+		954E84DD1B732E5300210FC2 /* XCDyLibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 954E84DB1B732E5300210FC2 /* XCDyLibDefinition.m */; };
 		95C657EF1B730AF8005FBB46 /* XCBundleDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C657ED1B730AF8005FBB46 /* XCBundleDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95C657F01B730AF8005FBB46 /* XCBundleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C657EE1B730AF8005FBB46 /* XCBundleDefinition.m */; };
 		BA79809B196A253223139967 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA798378F006ADD44A37C678 /* InfoPlist.strings */; };
@@ -94,6 +96,8 @@
 		6BCED6E21A4A61DC0005596F /* XcodeEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCED6E51A4A61DC0005596F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BD8982D14EA2441007875F4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		954E84DA1B732E5300210FC2 /* XCDyLibDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDyLibDefinition.h; sourceTree = "<group>"; };
+		954E84DB1B732E5300210FC2 /* XCDyLibDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDyLibDefinition.m; sourceTree = "<group>"; };
 		95C657ED1B730AF8005FBB46 /* XCBundleDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCBundleDefinition.h; sourceTree = "<group>"; };
 		95C657EE1B730AF8005FBB46 /* XCBundleDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCBundleDefinition.m; sourceTree = "<group>"; };
 		BA798233F677AB6DE9FB37FC /* NSString+TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TestResource.m"; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 				BA79885862A8419969A4CC7A /* XCFrameworkDefinition.m */,
 				95C657ED1B730AF8005FBB46 /* XCBundleDefinition.h */,
 				95C657EE1B730AF8005FBB46 /* XCBundleDefinition.m */,
+				954E84DA1B732E5300210FC2 /* XCDyLibDefinition.h */,
+				954E84DB1B732E5300210FC2 /* XCDyLibDefinition.m */,
 				BA798C11E473C251F07B0DAA /* XcodeMemberType.h */,
 				BA798C3E8F2CD550594E7231 /* XcodeMemberType.m */,
 				BA798D221F1008AE859B76B8 /* XCXibDefinition.h */,
@@ -353,6 +359,7 @@
 				BA7983A0DEE6E0B98286444A /* XCClassDefinition.h in Headers */,
 				BA798641126C8C9498C21843 /* XCSourceFile.h in Headers */,
 				95C657EF1B730AF8005FBB46 /* XCBundleDefinition.h in Headers */,
+				954E84DC1B732E5300210FC2 /* XCDyLibDefinition.h in Headers */,
 				BA798F6617C56888653CE018 /* XcodeEditor-Prefix.pch in Headers */,
 				BA7984763E39F64955CFE6F5 /* XcodeMemberType.h in Headers */,
 				BA79868C0786BB13E5C324ED /* XCProject.h in Headers */,
@@ -508,6 +515,7 @@
 				BA79876598EF30F3EE513484 /* XCFileOperationQueue.m in Sources */,
 				BA7984F6EE4FA90717414543 /* XCProject+SubProject.m in Sources */,
 				BA7986719FB605B7F7698E81 /* XcodeMemberType.m in Sources */,
+				954E84DD1B732E5300210FC2 /* XCDyLibDefinition.m in Sources */,
 				BA7981663E00E804C25FDA0D /* XCProject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

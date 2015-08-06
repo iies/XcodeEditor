@@ -136,6 +136,7 @@
  * Adds a dylib to the group
  */
 - (void)addDyLib:(XCDyLibDefinition*)dylibDefinition;
+- (void)addDyLib:(XCDyLibDefinition*)dylibDefinition toTargets:(NSArray*)targets;
 
 /**
 * Adds a source file of arbitrary type - image resource, header, etc.

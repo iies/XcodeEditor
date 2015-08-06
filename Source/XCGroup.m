@@ -258,6 +258,13 @@
     [_project objects][_key] = [self asDictionary];
 }
 
+- (void)addDyLib:(XCDyLibDefinition*)dylibDefinition toTargets:(NSArray*)targets
+{
+    [self addDyLib:dylibDefinition];
+    XCSourceFile* dylibSourceRef = (XCSourceFile*) [self memberWithDisplayName:[dylibDefinition name]];
+    [self addSourceFile:dylibSourceRef toTargets:targets];
+}
+
 - (void)addFolderReference:(NSString*)sourceFolder {
     NSDictionary *folderReferenceDictionary = [self makeFileReferenceWithPath:sourceFolder name:[sourceFolder lastPathComponent] type:Folder];
     NSString* folderReferenceKey = [[XCKeyBuilder forItemNamed:[sourceFolder lastPathComponent]] build];

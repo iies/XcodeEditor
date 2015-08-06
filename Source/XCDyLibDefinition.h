@@ -6,7 +6,7 @@
 //
 //
 
-#import <XcodeEditor/XcodeEditor.h>
+#import <Foundation/Foundation.h>
 #import "XCAbstractDefinition.h"
 
 @interface XCDyLibDefinition : XCAbstractDefinition

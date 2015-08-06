@@ -127,8 +127,6 @@
 {
     [member becomeBuildFile];
     NSDictionary* target = [[_project objects] objectForKey:_key];
-    
-    NSLog(@"#### BUILD PHASE: %@=%@", [member name], [NSString xce_stringFromMemberType:[member buildPhase]]);
 
     for (NSString* buildPhaseKey in [target objectForKey:@"buildPhases"])
     {

@@ -19,6 +19,7 @@
 @class XCXibDefinition;
 @class XCFileOperationQueue;
 @class XCFrameworkDefinition;
+@class XCBundleDifinition;
 @class XCSourceFileDefinition;
 @class XCSubProjectDefinition;
 
@@ -106,6 +107,12 @@
 - (void)addFramework:(XCFrameworkDefinition*)frameworkDefinition;
 
 /**
+ * Adds a bundle to the group. If the group already contains the bundle, the contents will be updated if the
+ * bundle definition's copyToDestination flag is yes, otherwise it will be ignored.
+ */
+- (void)addBundle:(XCBundleDifinition*)bundleDifinition;
+
+/**
 * Adds a group with a path relative to this group.
 */
 - (XCGroup*)addGroupWithPath:(NSString*)path;
@@ -118,13 +125,17 @@
 /**
 * Adds a framework to the group, making it a member of the specified targets.
 */
-- (void)addFramework:(XCFrameworkDefinition*)framework toTargets:(NSArray*)targets;
+- (void)addFramework:(XCFrameworkDefinition*)frameworkDefinition toTargets:(NSArray*)targets;
+
+/**
+ * Adds a bundle to the group, making it a member of the specified targets.
+ */
+- (void)addBundle:(XCBundleDifinition*)bundleDifinition toTargets:(NSArray*)targets;
 
 /**
 * Adds a source file of arbitrary type - image resource, header, etc.
 */
 - (void)addSourceFile:(XCSourceFileDefinition*)sourceFileDefinition;
-
 
 /**
  * Adds a xib file to the group. If the group already contains a class by the same name, the contents will be updated.

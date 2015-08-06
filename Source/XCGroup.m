@@ -12,6 +12,7 @@
 
 
 #import "XCFrameworkDefinition.h"
+#import "XCBundleDifinition.h"
 #import "XCTarget.h"
 #import "XCFileOperationQueue.h"
 #import "XCXibDefinition.h"
@@ -190,6 +191,53 @@
     [self addSourceFile:frameworkSourceRef toTargets:targets];
 }
 
+- (void)addBundle:(XCBundleDifinition *)bundleDifinition
+{
+    if (([self memberWithDisplayName:[bundleDifinition name]]) == nil)
+    {
+        NSDictionary* fileReference;
+        if ([bundleDifinition copyToDestination])
+        {
+            fileReference = [self makeFileReferenceWithPath:[bundleDifinition name] name:nil type:Bundle];
+            BOOL copyBundle = NO;
+            if ([bundleDifinition fileOperationType] == XCFileOperationTypeOverwrite)
+            {
+                copyBundle = YES;
+            }
+            else if ([bundleDifinition fileOperationType] == XCFileOperationTypeAcceptExisting)
+            {
+                NSString* bundleName = [[bundleDifinition filePath] lastPathComponent];
+                if (![_fileOperationQueue fileWithName:bundleName existsInProjectDirectory:[self pathRelativeToProjectRoot]])
+                {
+                    copyBundle = YES;
+                }
+                
+            }
+            if (copyFramework)
+            {
+                [_fileOperationQueue queueFrameworkWithFilePath:[bundleDifinition filePath]
+                                                    inDirectory:[self pathRelativeToProjectRoot]];
+            }
+        }
+        else
+        {
+            NSString* path = [bundleDifinition filePath];
+            NSString* name = [bundleDifinition name];
+            fileReference = [self makeFileReferenceWithPath:path name:name type:Framework];
+        }
+        NSString* bundleKey = [[XCKeyBuilder forItemNamed:[bundleDifinition name]] build];
+        [_project objects][bundleKey] = fileReference;
+        [self addMemberWithKey:bundleKey];
+    }
+    [_project objects][_key] = [self asDictionary];
+}
+
+- (void)addBundle:(XCBundleDifinition*)bundleDifinition toTargets:(NSArray*)targets
+{
+    [self addBundle:bundleDifinition];
+    XCSourceFile* bundleSourceRef = (XCSourceFile*) [self memberWithDisplayName:[bundleDifinition name]];
+    [self addSourceFile:bundleSourceRef toTargets:targets];
+}
 
 - (void)addFolderReference:(NSString*)sourceFolder {
     NSDictionary *folderReferenceDictionary = [self makeFileReferenceWithPath:sourceFolder name:[sourceFolder lastPathComponent] type:Folder];

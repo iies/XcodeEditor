@@ -48,7 +48,7 @@
     self = [super init];
     if (self)
     {
-        _name = fileName;
+        _name = [fileName copy];
         _copyToDestination = copyToDestination;
     }
     return self;

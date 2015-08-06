@@ -22,7 +22,7 @@
     BOOL _copyToDestination;
 }
 
-@property(nonatomic, strong, readonly) NSString *name;
+@property(nonatomic, strong, readonly) NSString* name;
 @property(nonatomic, strong, readonly) NSString* filePath;
 @property(nonatomic, readonly) BOOL copyToDestination;
 

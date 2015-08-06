@@ -26,7 +26,7 @@
 		6BCED7001A4A629D0005596F /* XCProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798CFD524E5A3CF155C816 /* XCProjectTests.m */; };
 		6BCED7011A4A62A00005596F /* XCClassDefinitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7984685319A7BB1B37DBE9 /* XCClassDefinitionTests.m */; };
 		6BCED7031A4A62B00005596F /* XCKeyBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798BD3F30B4E39066F8108 /* XCKeyBuilderTests.m */; };
-		954E84DC1B732E5300210FC2 /* XCDyLibDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E84DA1B732E5300210FC2 /* XCDyLibDefinition.h */; };
+		954E84DC1B732E5300210FC2 /* XCDyLibDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E84DA1B732E5300210FC2 /* XCDyLibDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		954E84DD1B732E5300210FC2 /* XCDyLibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 954E84DB1B732E5300210FC2 /* XCDyLibDefinition.m */; };
 		95C657EF1B730AF8005FBB46 /* XCBundleDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C657ED1B730AF8005FBB46 /* XCBundleDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95C657F01B730AF8005FBB46 /* XCBundleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C657EE1B730AF8005FBB46 /* XCBundleDefinition.m */; };
@@ -359,7 +359,6 @@
 				BA7983A0DEE6E0B98286444A /* XCClassDefinition.h in Headers */,
 				BA798641126C8C9498C21843 /* XCSourceFile.h in Headers */,
 				95C657EF1B730AF8005FBB46 /* XCBundleDefinition.h in Headers */,
-				954E84DC1B732E5300210FC2 /* XCDyLibDefinition.h in Headers */,
 				BA798F6617C56888653CE018 /* XcodeEditor-Prefix.pch in Headers */,
 				BA7984763E39F64955CFE6F5 /* XcodeMemberType.h in Headers */,
 				BA79868C0786BB13E5C324ED /* XCProject.h in Headers */,
@@ -369,6 +368,7 @@
 				BA798AD506D19B5D3FB6DE4E /* XCAbstractDefinition.h in Headers */,
 				BA7985C5136218B0D782F7F1 /* XCProject+SubProject.h in Headers */,
 				BA79825A7D7CB5AD4EE31A6C /* XCGroup.h in Headers */,
+				954E84DC1B732E5300210FC2 /* XCDyLibDefinition.h in Headers */,
 				BA79845EF211493263B4D0FC /* XCTarget.h in Headers */,
 				BA798BE4876F847D0F1BA266 /* XCSourceFileDefinition.h in Headers */,
 				BA7985C665CCF83437B2231E /* XCProjectBuildConfig.h in Headers */,

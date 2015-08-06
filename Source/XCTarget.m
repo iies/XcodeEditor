@@ -127,13 +127,14 @@
 {
     [member becomeBuildFile];
     NSDictionary* target = [[_project objects] objectForKey:_key];
+    
+    NSLog(@"#### BUILD PHASE: %@=%@", [member name], [NSString xce_stringFromMemberType:[member buildPhase]]);
 
     for (NSString* buildPhaseKey in [target objectForKey:@"buildPhases"])
     {
         NSMutableDictionary* buildPhase = [[_project objects] objectForKey:buildPhaseKey];
         if ([[buildPhase valueForKey:@"isa"] xce_asMemberType] == [member buildPhase])
         {
-
             NSMutableArray* files = [buildPhase objectForKey:@"files"];
             if (![files containsObject:[member buildFileKey]])
             {

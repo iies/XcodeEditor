@@ -175,7 +175,13 @@
         {
             NSString* path = [frameworkDefinition filePath];
             NSString* name = [frameworkDefinition name];
-            fileReference = [self makeFileReferenceWithPath:path name:name type:Framework];
+            
+            if (path) {
+                fileReference = [self makeFileReferenceWithPath:path name:name type:Framework];
+            } else {
+                fileReference = [self makeSdkRootFileReferenceWithPath:[NSString stringWithFormat:@"System/Library/Frameworks/%@", name]
+                                                                  name:name type:Framework];
+            }
         }
         NSString* frameworkKey = [[XCKeyBuilder forItemNamed:[frameworkDefinition name]] build];
         [_project objects][frameworkKey] = fileReference;
@@ -244,7 +250,7 @@
 {
     NSString *name = [dylibDefinition name];
     NSString *path = [dylibDefinition path] ?: [NSString stringWithFormat:@"usr/lib/%@", name];
-    NSDictionary *dylibReferenceDictionary = [self makeFileReferenceWithPath:path name:name type:DyLib];
+    NSDictionary *dylibReferenceDictionary = [self makeSdkRootFileReferenceWithPath:path name:name type:DyLib];
     
     NSString *dylibReferenceKey = [[XCKeyBuilder forItemNamed:name] build];
     [self addMemberWithKey:dylibReferenceKey];
@@ -765,6 +771,23 @@
     return reference;
 }
 
+- (NSDictionary*)makeSdkRootFileReferenceWithPath:(NSString*)path name:(NSString*)name type:(XcodeSourceFileType)type
+{
+    NSMutableDictionary* reference = [NSMutableDictionary dictionary];
+    reference[@"isa"] = [NSString xce_stringFromMemberType:PBXFileReferenceType];
+    reference[@"fileEncoding"] = @"4";
+    reference[@"lastKnownFileType"] = NSStringFromXCSourceFileType(type);
+    if (name != nil)
+    {
+        reference[@"name"] = [name lastPathComponent];
+    }
+    if (path != nil)
+    {
+        reference[@"path"] = path;
+    }
+    reference[@"sourceTree"] = @"SDKROOT";
+    return reference;
+}
 
 - (NSDictionary*)asDictionary
 {

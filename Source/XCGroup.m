@@ -223,7 +223,7 @@
         {
             NSString* path = [bundleDifinition filePath];
             NSString* name = [bundleDifinition name];
-            fileReference = [self makeFileReferenceWithPath:path name:name type:Framework];
+            fileReference = [self makeFileReferenceWithPath:path name:name type:Bundle];
         }
         NSString* bundleKey = [[XCKeyBuilder forItemNamed:[bundleDifinition name]] build];
         [_project objects][bundleKey] = fileReference;

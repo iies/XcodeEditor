@@ -12,7 +12,7 @@
 @interface XCDyLibDefinition : XCAbstractDefinition
 {
     NSString *_name;
-    NSString *_path;b
+    NSString *_path;
 }
 
 @property (nonatomic, strong, readonly) NSString *name;

@@ -6,9 +6,9 @@
 //
 //
 
-#import "XCBundleDifinition.h"
+#import "XCBundleDefinition.h"
 
-@implementation XCBundleDifinition
+@implementation XCBundleDefinition
 
 @synthesize filePath = _filePath;
 @synthesize copyToDestination = _copyToDestination;

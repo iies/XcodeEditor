@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "XCAbstractDefinition.h"
 
-@interface XCBundleDifinition : XCAbstractDefinition
+@interface XCBundleDefinition : XCAbstractDefinition
 {
     NSString* _filePath;
     BOOL _copyToDestination;

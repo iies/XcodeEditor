@@ -26,8 +26,8 @@
 		6BCED7001A4A629D0005596F /* XCProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798CFD524E5A3CF155C816 /* XCProjectTests.m */; };
 		6BCED7011A4A62A00005596F /* XCClassDefinitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7984685319A7BB1B37DBE9 /* XCClassDefinitionTests.m */; };
 		6BCED7031A4A62B00005596F /* XCKeyBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798BD3F30B4E39066F8108 /* XCKeyBuilderTests.m */; };
-		95C657EF1B730AF8005FBB46 /* XCBundleDifinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C657ED1B730AF8005FBB46 /* XCBundleDifinition.h */; };
-		95C657F01B730AF8005FBB46 /* XCBundleDifinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C657EE1B730AF8005FBB46 /* XCBundleDifinition.m */; };
+		95C657EF1B730AF8005FBB46 /* XCBundleDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C657ED1B730AF8005FBB46 /* XCBundleDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95C657F01B730AF8005FBB46 /* XCBundleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C657EE1B730AF8005FBB46 /* XCBundleDefinition.m */; };
 		BA79809B196A253223139967 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA798378F006ADD44A37C678 /* InfoPlist.strings */; };
 		BA7980D47618535CEEE56C07 /* XcodeSourceFileType.h in Headers */ = {isa = PBXBuildFile; fileRef = BA798CF27DA49D73EBE0FCB7 /* XcodeSourceFileType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA7981663E00E804C25FDA0D /* XCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7989AC9710D456572783C7 /* XCProject.m */; };
@@ -62,7 +62,7 @@
 		BA798BE4876F847D0F1BA266 /* XCSourceFileDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = BA798C2F90A12BFEE77EFA5D /* XCSourceFileDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA798DC320D5F6F188C112B3 /* XCKeyBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = BA798909AC4D1FCE033E64C5 /* XCKeyBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA798EFC5F24AC9FD857373C /* XCFrameworkDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = BA7986BC9EE998925B797690 /* XCFrameworkDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA798F131E3B0412BEE23CA3 /* XcodeEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = BA79888A08A5739C728633D2 /* XcodeEditor.h */; };
+		BA798F131E3B0412BEE23CA3 /* XcodeEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = BA79888A08A5739C728633D2 /* XcodeEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA798F6617C56888653CE018 /* XcodeEditor-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = BA798CECA2420D48B499842E /* XcodeEditor-Prefix.pch */; };
 /* End PBXBuildFile section */
 
@@ -94,8 +94,8 @@
 		6BCED6E21A4A61DC0005596F /* XcodeEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCED6E51A4A61DC0005596F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BD8982D14EA2441007875F4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		95C657ED1B730AF8005FBB46 /* XCBundleDifinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCBundleDifinition.h; sourceTree = "<group>"; };
-		95C657EE1B730AF8005FBB46 /* XCBundleDifinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCBundleDifinition.m; sourceTree = "<group>"; };
+		95C657ED1B730AF8005FBB46 /* XCBundleDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCBundleDefinition.h; sourceTree = "<group>"; };
+		95C657EE1B730AF8005FBB46 /* XCBundleDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCBundleDefinition.m; sourceTree = "<group>"; };
 		BA798233F677AB6DE9FB37FC /* NSString+TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TestResource.m"; sourceTree = "<group>"; };
 		BA798257DC8C1D51244A87F2 /* expanz-iOS-SDK.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "expanz-iOS-SDK.zip"; sourceTree = "<group>"; };
 		BA798287F70884A45C9F3721 /* XCAbstractDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCAbstractDefinition.m; sourceTree = "<group>"; };
@@ -271,8 +271,8 @@
 				BA798287F70884A45C9F3721 /* XCAbstractDefinition.m */,
 				BA7986BC9EE998925B797690 /* XCFrameworkDefinition.h */,
 				BA79885862A8419969A4CC7A /* XCFrameworkDefinition.m */,
-				95C657ED1B730AF8005FBB46 /* XCBundleDifinition.h */,
-				95C657EE1B730AF8005FBB46 /* XCBundleDifinition.m */,
+				95C657ED1B730AF8005FBB46 /* XCBundleDefinition.h */,
+				95C657EE1B730AF8005FBB46 /* XCBundleDefinition.m */,
 				BA798C11E473C251F07B0DAA /* XcodeMemberType.h */,
 				BA798C3E8F2CD550594E7231 /* XcodeMemberType.m */,
 				BA798D221F1008AE859B76B8 /* XCXibDefinition.h */,
@@ -352,14 +352,14 @@
 				BA798DC320D5F6F188C112B3 /* XCKeyBuilder.h in Headers */,
 				BA7983A0DEE6E0B98286444A /* XCClassDefinition.h in Headers */,
 				BA798641126C8C9498C21843 /* XCSourceFile.h in Headers */,
+				95C657EF1B730AF8005FBB46 /* XCBundleDefinition.h in Headers */,
 				BA798F6617C56888653CE018 /* XcodeEditor-Prefix.pch in Headers */,
 				BA7984763E39F64955CFE6F5 /* XcodeMemberType.h in Headers */,
 				BA79868C0786BB13E5C324ED /* XCProject.h in Headers */,
+				BA798F131E3B0412BEE23CA3 /* XcodeEditor.h in Headers */,
 				BA798EFC5F24AC9FD857373C /* XCFrameworkDefinition.h in Headers */,
-				95C657EF1B730AF8005FBB46 /* XCBundleDifinition.h in Headers */,
 				BA798A3F4DCBD5DD024B1147 /* XcodeGroupMember.h in Headers */,
 				BA798AD506D19B5D3FB6DE4E /* XCAbstractDefinition.h in Headers */,
-				BA798F131E3B0412BEE23CA3 /* XcodeEditor.h in Headers */,
 				BA7985C5136218B0D782F7F1 /* XCProject+SubProject.h in Headers */,
 				BA79825A7D7CB5AD4EE31A6C /* XCGroup.h in Headers */,
 				BA79845EF211493263B4D0FC /* XCTarget.h in Headers */,
@@ -494,7 +494,7 @@
 			files = (
 				BA79845D705566388D6A74F5 /* XCGroup.m in Sources */,
 				BA79857B12A10B9BFBF3C929 /* XCAbstractDefinition.m in Sources */,
-				95C657F01B730AF8005FBB46 /* XCBundleDifinition.m in Sources */,
+				95C657F01B730AF8005FBB46 /* XCBundleDefinition.m in Sources */,
 				BA79861FCDBD84679CA89D9E /* XCKeyBuilder.m in Sources */,
 				BA7981FF93FAFD6320C739ED /* XCSourceFile.m in Sources */,
 				BA7989692AF001BA1BBEACCF /* XCSourceFileDefinition.m in Sources */,

@@ -21,3 +21,4 @@
 #import "XCSubProjectDefinition.h"
 #import "XCTarget.h"
 #import "XCXibDefinition.h"
+#import "XCBundleDefinition.h"

@@ -15,6 +15,7 @@
 
 @implementation XCFrameworkDefinition
 
+@synthesize name = _name;
 @synthesize filePath = _filePath;
 @synthesize copyToDestination = _copyToDestination;
 
@@ -35,19 +36,22 @@
     self = [super init];
     if (self)
     {
+        _name = [filePath lastPathComponent];
         _filePath = [filePath copy];
         _copyToDestination = copyToDestination;
     }
     return self;
 }
 
-/* ====================================================================================================================================== */
-#pragma mark - Interface Methods
-
-- (NSString*)name
+- (id)initWithFileName:(NSString*)fileName copyToDestination:(BOOL)copyToDestination
 {
-    return [_filePath lastPathComponent];
+    self = [super init];
+    if (self)
+    {
+        _name = fileName;
+        _copyToDestination = copyToDestination;
+    }
+    return self;
 }
-
 
 @end

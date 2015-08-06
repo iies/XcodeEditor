@@ -17,18 +17,18 @@
 
 @interface XCFrameworkDefinition : XCAbstractDefinition
 {
+    NSString* _name;
     NSString* _filePath;
     BOOL _copyToDestination;
 }
 
+@property(nonatomic, strong, readonly) NSString *name;
 @property(nonatomic, strong, readonly) NSString* filePath;
 @property(nonatomic, readonly) BOOL copyToDestination;
 
 + (XCFrameworkDefinition*)frameworkDefinitionWithFilePath:(NSString*)filePath copyToDestination:(BOOL)copyToDestination;
 
 - (id)initWithFilePath:(NSString*)filePath copyToDestination:(BOOL)copyToDestination;
-
-- (NSString*)name;
-
+- (id)initWithFileName:(NSString*)fileName copyToDestination:(BOOL)copyToDestination;
 
 @end
